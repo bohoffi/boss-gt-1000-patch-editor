@@ -1,0 +1,10 @@
+$default-primary: mat-palette($mat-blue-grey);
+$default-accent:  mat-palette($mat-amber, A200, A100, A400);
+$default-warn:    mat-palette($mat-deep-orange);
+$default-theme:   mat-dark-theme($default-primary, $default-accent, $default-warn);
+
+@include angular-material-theme($default-theme);
+
+.theme-default {
+  @include angular-material-theme($default-theme);
+}

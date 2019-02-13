@@ -1,0 +1,8 @@
+$reverb-primary: mat-palette($mat-teal);
+$reverb-accent:  mat-palette($mat-teal, A200, A100, A400);
+$reverb-warn:    mat-palette($mat-red);
+$reverb-theme:   mat-dark-theme($reverb-primary, $reverb-accent, $reverb-warn);
+
+.theme-reverb {
+  @include angular-material-theme($reverb-theme);
+}

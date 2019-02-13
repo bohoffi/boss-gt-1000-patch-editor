@@ -2,19 +2,44 @@
 
 @include mat-core();
 
+// @angular/material colors
+/*
+red
+pink
+purple
+deep-purple
+indigo
+blue
+light-blue
+cyan
+teal
+green
+light-green
+lime
+yellow
+amber
+orange
+deep-orange
+brown
+grey
+blue-grey
+*/
+
+@import './themes/theme.default.scss';
+@import './themes/theme.amp.scss';
+@import './themes/theme.chorus.scss';
+@import './themes/theme.comp.scss';
+@import './themes/theme.delay.scss';
+@import './themes/theme.ds.scss';
+@import './themes/theme.eq.scss';
+@import './themes/theme.fx.scss';
+@import './themes/theme.looper.scss';
+@import './themes/theme.master.scss';
+@import './themes/theme.noise-gate.scss';
+@import './themes/theme.reverb.scss';
+@import './themes/theme.send-return.scss';
+
 $dark-bg: #2c2c2c;
-
-$bossGtPatchEditor-primary: mat-palette($mat-blue-grey);
-$bossGtPatchEditor-accent: mat-palette($mat-amber, A200, A100, A400);
-$bossGtPatchEditor-warn: mat-palette($mat-deep-orange);
-
-$bossGtPatchEditor-theme: mat-dark-theme(
-  $bossGtPatchEditor-primary,
-  $bossGtPatchEditor-accent,
-  $bossGtPatchEditor-warn
-);
-
-@include angular-material-theme($bossGtPatchEditor-theme);
 
 html,
 body {

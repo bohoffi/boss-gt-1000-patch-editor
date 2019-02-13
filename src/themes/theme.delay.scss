@@ -1,0 +1,8 @@
+$delay-primary: mat-palette($mat-grey);
+$delay-accent:  mat-palette($mat-grey, A200, A100, A400);
+$delay-warn:    mat-palette($mat-red);
+$delay-theme:   mat-dark-theme($delay-primary, $delay-accent, $delay-warn);
+
+.theme-delay {
+  @include angular-material-theme($delay-theme);
+}

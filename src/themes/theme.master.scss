@@ -1,0 +1,8 @@
+$master-primary: mat-palette($mat-light-green);
+$master-accent:  mat-palette($mat-green, A200, A100, A400);
+$master-warn:    mat-palette($mat-red);
+$master-theme:   mat-light-theme($master-primary, $master-accent, $master-warn);
+
+.theme-master {
+  @include angular-material-theme($master-theme);
+}
