@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$dark-bg: #2c2c2c;
+
+$bossGtPatchEditor-primary: mat-palette($mat-blue-grey);
+$bossGtPatchEditor-accent: mat-palette($mat-amber, A200, A100, A400);
+$bossGtPatchEditor-warn: mat-palette($mat-deep-orange);
+
+$bossGtPatchEditor-theme: mat-dark-theme(
+  $bossGtPatchEditor-primary,
+  $bossGtPatchEditor-accent,
+  $bossGtPatchEditor-warn
+);
+
+@include angular-material-theme($bossGtPatchEditor-theme);
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background-color: $dark-bg;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
