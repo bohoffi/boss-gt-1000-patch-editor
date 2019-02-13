@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'bgt-pe-block-container',
@@ -9,5 +9,20 @@ import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 export class BlockContainerComponent {
 
   @Input()
+  switchable = true;
+  @Input()
+  blockTitle: string;
+  @Input()
   theme = 'theme-default';
+
+  @Output()
+  stateChanged: EventEmitter<boolean> = new EventEmitter();
+
+  // private _state: boolean;
+  _state: boolean = false;
+
+  toggleState(): void {
+    this._state = !this._state;
+    this.stateChanged.emit(this._state);
+  }
 }

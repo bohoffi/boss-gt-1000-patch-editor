@@ -1,4 +1,5 @@
 @import '~@angular/material/theming';
+@import './styles/theming';
 
 @include mat-core();
 
@@ -25,19 +26,19 @@ grey
 blue-grey
 */
 
-@import './themes/theme.default.scss';
-@import './themes/theme.amp.scss';
-@import './themes/theme.chorus.scss';
-@import './themes/theme.comp.scss';
-@import './themes/theme.delay.scss';
-@import './themes/theme.ds.scss';
-@import './themes/theme.eq.scss';
-@import './themes/theme.fx.scss';
-@import './themes/theme.looper.scss';
-@import './themes/theme.master.scss';
-@import './themes/theme.noise-gate.scss';
-@import './themes/theme.reverb.scss';
-@import './themes/theme.send-return.scss';
+@include theme(default);
+@include theme(amp);
+@include theme(chorus);
+@include theme(comp);
+@include theme(delay);
+@include theme(ds);
+@include theme(eq);
+@include theme(fx);
+@include theme(looper);
+@include theme(master);
+@include theme(noise-gate);
+@include theme(reverb);
+@include theme(send-return);
 
 $dark-bg: #2c2c2c;
 

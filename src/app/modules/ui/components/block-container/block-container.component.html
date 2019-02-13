@@ -1,4 +1,15 @@
 <div [ngClass]="theme">
-  <ng-content></ng-content>
-  <button mat-mini-fab color="primary">Primary</button>
+  <mat-toolbar color="primary">
+    <mat-button-toggle
+      appearance="legacy"
+      color="accent"
+      *ngIf="switchable"
+      (change)="toggleState()"
+    >
+      <mat-icon aria-label="on off switch button">power_settings_new</mat-icon>
+    </mat-button-toggle>
+    <span style="margin-left: 0.5em">{{ blockTitle }}</span>
+    <span *ngDebug style="margin-left: 0.5em">{{ _state | json }}</span>
+  </mat-toolbar>
+  <bgt-pe-parameter-control></bgt-pe-parameter-control>
 </div>

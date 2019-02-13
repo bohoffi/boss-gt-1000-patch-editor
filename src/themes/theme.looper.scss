@@ -1,8 +1,0 @@
-$looper-primary: mat-palette($mat-red);
-$looper-accent:  mat-palette($mat-red, A200, A100, A400);
-$looper-warn:    mat-palette($mat-red);
-$looper-theme:   mat-dark-theme($looper-primary, $looper-accent, $looper-warn);
-
-.theme-looper {
-  @include angular-material-theme($looper-theme);
-}

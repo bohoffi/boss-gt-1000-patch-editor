@@ -1,8 +1,0 @@
-$fx-primary: mat-palette($mat-pink);
-$fx-accent:  mat-palette($mat-pink, A200, A100, A400);
-$fx-warn:    mat-palette($mat-red);
-$fx-theme:   mat-dark-theme($fx-primary, $fx-accent, $fx-warn);
-
-.theme-fx {
-  @include angular-material-theme($fx-theme);
-}

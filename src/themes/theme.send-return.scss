@@ -1,8 +1,0 @@
-$send-return-primary: mat-palette($mat-light-green);
-$send-return-accent:  mat-palette($mat-green, A200, A100, A400);
-$send-return-warn:    mat-palette($mat-red);
-$send-return-theme:   mat-light-theme($send-return-primary, $send-return-accent, $send-return-warn);
-
-.theme-send-return {
-  @include angular-material-theme($send-return-theme);
-}

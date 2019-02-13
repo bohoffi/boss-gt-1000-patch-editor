@@ -1,0 +1,105 @@
+$theme-default: (
+  primary: mat-palette($mat-blue-grey),
+  accent: mat-palette($mat-amber, A200, A100, A400),
+  warn: mat-palette($mat-deep-orange)
+);
+
+$theme-amp: (
+  primary: mat-palette($mat-yellow),
+  accent: mat-palette($mat-yellow, A200, A100, A400),
+  warn: mat-palette($mat-red),
+  button-toggle-theme: true
+);
+
+$theme-chorus: (
+  primary: mat-palette($mat-blue),
+  accent: mat-palette($mat-light-blue, A200, A100, A400),
+  warn: mat-palette($mat-red),
+  button-toggle-theme: true
+);
+
+$theme-comp: (
+  primary: mat-palette($mat-deep-purple),
+  accent: mat-palette($mat-deep-purple, A200, A100, A400),
+  warn: mat-palette($mat-red),
+  button-toggle-theme: true
+);
+
+$theme-delay: (
+  primary: mat-palette($mat-grey),
+  accent: mat-palette($mat-grey, A200, A100, A400),
+  warn: mat-palette($mat-red),
+  button-toggle-theme: true
+);
+
+$theme-ds: (
+  primary: mat-palette($mat-orange),
+  accent: mat-palette($mat-orange, 800),
+  warn: mat-palette($mat-red),
+  button-toggle-theme: true
+);
+
+$theme-eq: (
+  primary: mat-palette($mat-light-green),
+  accent: mat-palette($mat-green, A200, A100, A400),
+  warn: mat-palette($mat-red),
+  button-toggle-theme: true
+);
+
+$theme-fx: (
+  primary: mat-palette($mat-pink),
+  accent: mat-palette($mat-pink, A200, A100, A400),
+  warn: mat-palette($mat-red),
+  button-toggle-theme: true
+);
+
+$theme-looper: (
+  primary: mat-palette($mat-red),
+  accent: mat-palette($mat-red, A200, A100, A400),
+  warn: mat-palette($mat-red),
+  button-toggle-theme: true
+);
+
+$theme-master: (
+  primary: mat-palette($mat-light-green),
+  accent: mat-palette($mat-green, A200, A100, A400),
+  warn: mat-palette($mat-red),
+  button-toggle-theme: true
+);
+
+$theme-noise-gate: (
+  primary: mat-palette($mat-light-green),
+  accent: mat-palette($mat-green, A200, A100, A400),
+  warn: mat-palette($mat-red),
+  button-toggle-theme: true
+);
+
+$theme-reverb: (
+  primary: mat-palette($mat-teal),
+  accent: mat-palette($mat-teal, A200, A100, A400),
+  warn: mat-palette($mat-red),
+  button-toggle-theme: true
+);
+
+$theme-send-return: (
+  primary: mat-palette($mat-light-green),
+  accent: mat-palette($mat-green, A200, A100, A400),
+  warn: mat-palette($mat-red),
+  button-toggle-theme: true
+);
+
+$themes: (
+  default: $theme-default,
+  amp: $theme-amp,
+  chorus: $theme-chorus,
+  comp: $theme-comp,
+  delay: $theme-delay,
+  ds: $theme-ds,
+  eq: $theme-eq,
+  fx: $theme-fx,
+  looper: $theme-looper,
+  master: $theme-master,
+  noise-gate: $theme-noise-gate,
+  reverb: $theme-reverb,
+  send-return: $theme-send-return
+);

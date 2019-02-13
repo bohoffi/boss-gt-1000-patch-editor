@@ -1,8 +1,0 @@
-$ds-primary: mat-palette($mat-orange);
-$ds-accent:  mat-palette($mat-orange, A200, A100, A400);
-$ds-warn:    mat-palette($mat-red);
-$ds-theme:   mat-dark-theme($ds-primary, $ds-accent, $ds-warn);
-
-.theme-ds {
-  @include angular-material-theme($ds-theme);
-}

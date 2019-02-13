@@ -1,8 +1,0 @@
-$amp-primary: mat-palette($mat-yellow);
-$amp-accent:  mat-palette($mat-yellow, A200, A100, A400);
-$amp-warn:    mat-palette($mat-red);
-$amp-theme:   mat-dark-theme($amp-primary, $amp-accent, $amp-warn);
-
-.theme-amp {
-  @include angular-material-theme($amp-theme);
-}

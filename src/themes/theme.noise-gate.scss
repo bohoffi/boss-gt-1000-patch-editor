@@ -1,8 +1,0 @@
-$noise-gate-primary: mat-palette($mat-light-green);
-$noise-gate-accent:  mat-palette($mat-green, A200, A100, A400);
-$noise-gate-warn:    mat-palette($mat-red);
-$noise-gate-theme:   mat-light-theme($noise-gate-primary, $noise-gate-accent, $noise-gate-warn);
-
-.theme-noise-gate {
-  @include angular-material-theme($noise-gate-theme);
-}

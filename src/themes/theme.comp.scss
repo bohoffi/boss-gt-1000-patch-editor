@@ -1,8 +1,0 @@
-$comp-primary: mat-palette($mat-deep-purple);
-$comp-accent:  mat-palette($mat-deep-purple, A200, A100, A400);
-$comp-warn:    mat-palette($mat-red);
-$comp-theme:   mat-dark-theme($comp-primary, $comp-accent, $comp-warn);
-
-.theme-comp {
-  @include angular-material-theme($comp-theme);
-}

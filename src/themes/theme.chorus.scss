@@ -1,8 +1,0 @@
-$chorus-primary: mat-palette($mat-blue);
-$chorus-accent:  mat-palette($mat-blue, A200, A100, A400);
-$chorus-warn:    mat-palette($mat-red);
-$chorus-theme:   mat-dark-theme($chorus-primary, $chorus-accent, $chorus-warn);
-
-.theme-chorus {
-  @include angular-material-theme($chorus-theme);
-}

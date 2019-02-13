@@ -1,8 +1,0 @@
-$eq-primary: mat-palette($mat-light-green);
-$eq-accent:  mat-palette($mat-green, A200, A100, A400);
-$eq-warn:    mat-palette($mat-red);
-$eq-theme:   mat-light-theme($eq-primary, $eq-accent, $eq-warn);
-
-.theme-eq {
-  @include angular-material-theme($eq-theme);
-}
