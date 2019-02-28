@@ -6,4 +6,16 @@ export interface EffectBlock {
   title: string;
   identifier: string;
   switchable: boolean;
+  params?: EffectParameter[];
+}
+
+export interface EffectParameter {
+  name: string;
+  values: ParameterValue[];
+  defaultValueIndex?: number;
+}
+
+export interface ParameterValue {
+  display: string;
+  internalValue: number;
 }

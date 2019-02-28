@@ -1,4 +1,5 @@
 import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter } from '@angular/core';
+import { EffectBlock } from '@data/interfaces';
 
 @Component({
   selector: 'bgt-pe-block-container',
@@ -14,6 +15,8 @@ export class BlockContainerComponent {
   blockTitle: string;
   @Input()
   theme = 'theme-default';
+  @Input()
+  effectBlock: EffectBlock;
 
   @Output()
   stateChanged: EventEmitter<boolean> = new EventEmitter();

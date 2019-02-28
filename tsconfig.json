@@ -27,6 +27,12 @@
       ],
       "@data/types": [
         "app/modules/data/types/index.ts"
+      ],
+      "@data/values": [
+        "app/modules/data/values/index.ts"
+      ],
+      "@utils/generators": [
+        "app/modules/utils/generators/index.ts"
       ]
     }
   }

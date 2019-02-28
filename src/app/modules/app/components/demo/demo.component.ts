@@ -1,4 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { EffectBlock } from '@data/interfaces';
+import { distortion1, distortion2 } from '@data/values';
 
 @Component({
   selector: 'bgt-pe-demo',
@@ -7,7 +9,8 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DemoComponent {
-  blocks: { switchable: boolean; title: string; theme: string }[] = [
+  // blocks: { switchable: boolean; title: string; theme: string }[] = [
+  blocks: EffectBlock[] = [
     // {
     //   title: 'Amp',
     //   theme: 'theme-amp'
@@ -24,11 +27,13 @@ export class DemoComponent {
     //   title: 'Delay',
     //   theme: 'theme-delay'
     // },
-    {
-      switchable: true,
-      title: 'Distortion',
-      theme: 'theme-chorus'
-    },
+    // {
+    //   switchable: true,
+    //   title: 'Distortion',
+    //   theme: 'theme-ds'
+    distortion1,
+    distortion2,
+    // },
     // {
     //   title: 'EQ',
     //   theme: 'theme-eq'
@@ -41,11 +46,11 @@ export class DemoComponent {
     //   title: 'Looper',
     //   theme: 'theme-looper'
     // },
-    {
-      switchable: false,
-      title: 'Master',
-      theme: 'theme-master'
-    },
+    // {
+    //   switchable: false,
+    //   title: 'Master',
+    //   theme: 'theme-master'
+    // },
     // {
     //   title: 'Noise Gate',
     //   theme: 'theme-noise-gate'

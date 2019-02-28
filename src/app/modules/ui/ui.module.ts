@@ -5,7 +5,8 @@ import {
   MatButtonModule,
   MatIconModule,
   MatButtonToggleModule,
-  MatProgressSpinnerModule
+  MatProgressSpinnerModule,
+  MatGridListModule
 } from '@angular/material';
 import { BlockContainerComponent } from './components/block-container/block-container.component';
 import { ParameterControlComponent } from './components/parameter-control/parameter-control.component';
@@ -15,6 +16,7 @@ import { NgDebugDirective } from './directives/ng-debug.directive';
 const matModules: any[] = [
   MatButtonModule,
   MatButtonToggleModule,
+  MatGridListModule,
   MatIconModule,
   MatProgressSpinnerModule,
   MatToolbarModule
