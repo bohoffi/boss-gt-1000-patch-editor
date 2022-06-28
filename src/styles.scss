@@ -1,12 +1,12 @@
+@use '~@angular/material' as mat;
 @import "bootstrap/scss/bootstrap-reboot.scss";
 @import "bootstrap/scss/bootstrap-grid.scss";
 
-@import '~@angular/material/theming';
 @import './styles/theming';
 
 $grid-columns: 8 !default;
 
-@include mat-core();
+@include mat.core();
 
 // @angular/material colors
 /*

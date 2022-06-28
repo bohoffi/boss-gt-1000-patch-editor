@@ -1,4 +1,4 @@
-@import '~@angular/material/theming';
+@use '~@angular/material' as mat;
 @import './maps';
 
 @mixin mat-button-toggle-theme($app-theme, $disabled: null) {
@@ -6,13 +6,13 @@
   $accent: map-get($app-theme, accent);
 
   .mat-button-toggle {
-    background-color: darken(mat-color($primary), 25%);
+    background-color: darken(mat.get-color-from-palette($primary), 25%);
     color: white;
   }
 
   .mat-button-toggle-checked {
-    background-color: mat-color($accent);
-    color: mat-color($accent, default-contrast);
+    background-color: mat.get-color-from-palette($accent);
+    color: mat.get-color-from-palette($accent, default-contrast);
   }
 }
 
@@ -22,17 +22,17 @@
     $theme-primary: map-get($theme, primary);
     $theme-accent: map-get($theme, accent);
     $theme-warn: map-get($theme, warn);
-    $compiled-theme: mat-dark-theme($theme-primary, $theme-accent, $theme-warn);
+    $compiled-theme: mat.define-dark-theme($theme-primary, $theme-accent, $theme-warn);
 
     @if $identifier == default {
-      @include angular-material-theme($compiled-theme);
+      @include mat.all-component-themes($compiled-theme);
     }
 
     .theme-#{$identifier} {
-      @include angular-material-theme($compiled-theme);
+      @include mat.all-component-themes($compiled-theme);
 
       @if map-has-key($theme, button-toggle-theme) {
-        @include mat-button-toggle-theme($compiled-theme);
+        @include mat.button-toggle-theme($compiled-theme);
       }
     }
   } @else {
@@ -42,23 +42,23 @@
 
 @mixin block-theme(
   $identifier: 'default',
-  $primary: mat-palette($mat-blue-grey),
-  $accent: mat-palette($mat-amber, A200, A100, A400),
-  $warn: mat-palette($mat-deep-orange),
+  $primary: mat.define-palette(mat.$blue-grey-palette),
+  $accent: mat.define-palette(mat.$amber-palette, A200, A100, A400),
+  $warn: mat.define-palette(mat.$deep-orange-palette),
   $button-toggle-theme: false
 ) {
-  $theme: mat-dark-theme($primary, $accent, $warn);
+  $theme: mat.define-dark-theme($primary, $accent, $warn);
 
   @if $identifier == 'default' {
-    @include angular-material-theme($theme);
+    @include mat.all-component-themes($theme);
   }
 
   .theme-#{$identifier} {
-    @include angular-material-theme($theme);
+    @include mat.all-component-themes($theme);
     // @include mat-button-toggle-theme($theme);
 
     @if $button-toggle-theme == true {
-      @include mat-button-toggle-theme($theme);
+      @include mat.button-toggle-theme($theme);
     }
   }
 }
