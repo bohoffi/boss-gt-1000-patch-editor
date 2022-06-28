@@ -20,9 +20,7 @@
           "apps/bossGtPatchEditor/src/favicon.ico",
           "apps/bossGtPatchEditor/src/assets"
         ],
-        "styles": [
-          "apps/bossGtPatchEditor/src/styles.scss"
-        ],
+        "styles": ["apps/bossGtPatchEditor/src/styles.scss"],
         "scripts": [],
         "vendorChunk": true,
         "extractLicenses": false,
@@ -97,13 +95,20 @@
         "polyfills": "apps/bossGtPatchEditor/src/polyfills.ts",
         "tsConfig": "apps/bossGtPatchEditor/tsconfig.spec.json",
         "karmaConfig": "apps/bossGtPatchEditor/karma.conf.js",
-        "styles": [
-          "apps/bossGtPatchEditor/src/styles.scss"
-        ],
+        "styles": ["apps/bossGtPatchEditor/src/styles.scss"],
         "scripts": [],
         "assets": [
           "apps/bossGtPatchEditor/src/favicon.ico",
           "apps/bossGtPatchEditor/src/assets"
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/bossGtPatchEditor/**/*.ts",
+          "apps/bossGtPatchEditor/**/*.html"
         ]
       }
     }
