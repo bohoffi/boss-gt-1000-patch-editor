@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter } from '@angular/core';
-import { EffectBlock } from '@data/interfaces';
+import { EffectBlock } from 'shared-api';
 
 @Component({
   selector: 'bgt-pe-block-container',

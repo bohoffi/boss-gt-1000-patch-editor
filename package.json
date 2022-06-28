@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "nx",
-    "start": "nx serve bossGtPatchEditor:serve",
+    "start": "nx run bossGtPatchEditor:serve",
     "build": "nx build",
     "test": "nx test",
     "lint": "nx lint",

@@ -2,7 +2,6 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": ".",
-    "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
     "module": "es2020",
@@ -18,20 +17,17 @@
       "dom"
     ],
     "paths": {
-      "@data/interfaces": [
-        "apps/bossGtPatchEditor/src/app/modules/data/interfaces/index.ts"
-      ],
-      "@data/types": [
-        "apps/bossGtPatchEditor/src/app/modules/data/types/index.ts"
-      ],
-      "@data/values": [
-        "apps/bossGtPatchEditor/src/app/modules/data/values/index.ts"
-      ],
       "@environments/*": [
         "apps/bossGtPatchEditor/src/environments/*"
       ],
-      "@utils/generators": [
-        "apps/bossGtPatchEditor/src/app/modules/utils/generators/index.ts"
+      "shared-api": [
+        "libs/shared/api/src/index.ts"
+      ],
+      "shared-effects": [
+        "libs/shared/effects/src/index.ts"
+      ],
+      "utils-generators": [
+        "libs/utils/generators/src/index.ts"
       ]
     },
     "rootDir": "."

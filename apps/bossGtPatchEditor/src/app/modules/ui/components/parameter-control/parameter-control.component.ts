@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, HostListener } from '@angular/core';
-import { ParameterValue } from '@data/interfaces';
+import { ParameterValue } from 'shared-api';
 
 export enum KEY_CODE {
   UP_ARROW = 38,
@@ -14,9 +14,9 @@ export enum KEY_CODE {
 export class ParameterControlComponent implements OnInit {
 
   @Input()
-  name: string;
+  public name: string;
   @Input()
-  values: { display: string; value: number; }[];
+  values: ParameterValue[];
   @Input()
   defaultValueIndex = 0;
 

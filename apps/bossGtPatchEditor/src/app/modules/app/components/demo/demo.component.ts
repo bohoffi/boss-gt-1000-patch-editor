@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { EffectBlock } from '@data/interfaces';
-import { distortion1, distortion2 } from '@data/values';
+import { EffectBlock } from 'shared-api';
+import { distortion1, distortion2 } from 'shared-effects';
 
 @Component({
   selector: 'bgt-pe-demo',
