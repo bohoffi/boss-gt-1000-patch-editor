@@ -1,64 +1,9 @@
 @use '@angular/material' as mat;
-@import './maps';
 
-@mixin mat-button-toggle-theme($app-theme, $disabled: null) {
-  $primary: map-get($app-theme, primary);
-  $accent: map-get($app-theme, accent);
+@include mat.core();
 
-  .mat-button-toggle {
-    background-color: darken(mat.get-color-from-palette($primary), 25%);
-    color: white;
-  }
+$theme: mat.define-dark-theme((color: (primary: mat.define-palette(mat.$blue-grey-palette),
+        accent: mat.define-palette(mat.$amber-palette, A200, A100, A400),
+        warn: mat.define-palette(mat.$deep-orange-palette))));
 
-  .mat-button-toggle-checked {
-    background-color: mat.get-color-from-palette($accent);
-    color: mat.get-color-from-palette($accent, default-contrast);
-  }
-}
-
-@mixin theme($identifier) {
-  @if map-has-key($themes, $identifier) {
-    $theme: map-get($themes, $identifier);
-    $theme-primary: map-get($theme, primary);
-    $theme-accent: map-get($theme, accent);
-    $theme-warn: map-get($theme, warn);
-    $compiled-theme: mat.define-dark-theme($theme-primary, $theme-accent, $theme-warn);
-
-    @if $identifier == default {
-      @include mat.all-component-themes($compiled-theme);
-    }
-
-    .theme-#{$identifier} {
-      @include mat.all-component-themes($compiled-theme);
-
-      @if map-has-key($theme, button-toggle-theme) {
-        @include mat.button-toggle-theme($compiled-theme);
-      }
-    }
-  } @else {
-    @warn "Invalid theme identifier: `#{$identifier}`";
-  }
-}
-
-@mixin block-theme(
-  $identifier: 'default',
-  $primary: mat.define-palette(mat.$blue-grey-palette),
-  $accent: mat.define-palette(mat.$amber-palette, A200, A100, A400),
-  $warn: mat.define-palette(mat.$deep-orange-palette),
-  $button-toggle-theme: false
-) {
-  $theme: mat.define-dark-theme($primary, $accent, $warn);
-
-  @if $identifier == 'default' {
-    @include mat.all-component-themes($theme);
-  }
-
-  .theme-#{$identifier} {
-    @include mat.all-component-themes($theme);
-    // @include mat-button-toggle-theme($theme);
-
-    @if $button-toggle-theme == true {
-      @include mat.button-toggle-theme($theme);
-    }
-  }
-}
+@include mat.all-component-themes($theme);
