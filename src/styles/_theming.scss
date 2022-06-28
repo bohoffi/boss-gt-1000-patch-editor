@@ -1,0 +1,64 @@
+@import '~@angular/material/theming';
+@import './maps';
+
+@mixin mat-button-toggle-theme($app-theme, $disabled: null) {
+  $primary: map-get($app-theme, primary);
+  $accent: map-get($app-theme, accent);
+
+  .mat-button-toggle {
+    background-color: darken(mat-color($primary), 25%);
+    color: white;
+  }
+
+  .mat-button-toggle-checked {
+    background-color: mat-color($accent);
+    color: mat-color($accent, default-contrast);
+  }
+}
+
+@mixin theme($identifier) {
+  @if map-has-key($themes, $identifier) {
+    $theme: map-get($themes, $identifier);
+    $theme-primary: map-get($theme, primary);
+    $theme-accent: map-get($theme, accent);
+    $theme-warn: map-get($theme, warn);
+    $compiled-theme: mat-dark-theme($theme-primary, $theme-accent, $theme-warn);
+
+    @if $identifier == default {
+      @include angular-material-theme($compiled-theme);
+    }
+
+    .theme-#{$identifier} {
+      @include angular-material-theme($compiled-theme);
+
+      @if map-has-key($theme, button-toggle-theme) {
+        @include mat-button-toggle-theme($compiled-theme);
+      }
+    }
+  } @else {
+    @warn "Invalid theme identifier: `#{$identifier}`";
+  }
+}
+
+@mixin block-theme(
+  $identifier: 'default',
+  $primary: mat-palette($mat-blue-grey),
+  $accent: mat-palette($mat-amber, A200, A100, A400),
+  $warn: mat-palette($mat-deep-orange),
+  $button-toggle-theme: false
+) {
+  $theme: mat-dark-theme($primary, $accent, $warn);
+
+  @if $identifier == 'default' {
+    @include angular-material-theme($theme);
+  }
+
+  .theme-#{$identifier} {
+    @include angular-material-theme($theme);
+    // @include mat-button-toggle-theme($theme);
+
+    @if $button-toggle-theme == true {
+      @include mat-button-toggle-theme($theme);
+    }
+  }
+}
