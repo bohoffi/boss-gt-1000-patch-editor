@@ -1,1 +1,58 @@
-/* You can add global styles to this file, and also import other style files */
+@import "bootstrap/scss/bootstrap-reboot.scss";
+@import "bootstrap/scss/bootstrap-grid.scss";
+
+@import '~@angular/material/theming';
+@import './styles/theming';
+
+$grid-columns: 8 !default;
+
+@include mat-core();
+
+// @angular/material colors
+/*
+red
+pink
+purple
+deep-purple
+indigo
+blue
+light-blue
+cyan
+teal
+green
+light-green
+lime
+yellow
+amber
+orange
+deep-orange
+brown
+grey
+blue-grey
+*/
+
+@include theme(default);
+@include theme(amp);
+@include theme(chorus);
+@include theme(comp);
+@include theme(delay);
+@include theme(ds);
+@include theme(eq);
+@include theme(fx);
+@include theme(looper);
+@include theme(master);
+@include theme(noise-gate);
+@include theme(reverb);
+@include theme(send-return);
+
+$dark-bg: #2c2c2c;
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background-color: $dark-bg;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
