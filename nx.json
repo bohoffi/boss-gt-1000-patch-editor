@@ -1,7 +1,7 @@
 {
   "npmScope": "boss-gt-patch-editor",
   "affected": {
-    "defaultBase": "main"
+    "defaultBase": "develop"
   },
   "implicitDependencies": {
     "package.json": {
