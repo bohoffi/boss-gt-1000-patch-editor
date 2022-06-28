@@ -20,7 +20,9 @@
           "apps/bossGtPatchEditor/src/favicon.ico",
           "apps/bossGtPatchEditor/src/assets"
         ],
-        "styles": ["apps/bossGtPatchEditor/src/styles.scss"],
+        "styles": [
+          "apps/bossGtPatchEditor/src/styles.scss"
+        ],
         "scripts": [],
         "vendorChunk": true,
         "extractLicenses": false,
@@ -89,18 +91,13 @@
       }
     },
     "test": {
-      "executor": "@angular-devkit/build-angular:karma",
+      "builder": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/apps/bossGtPatchEditor"
+      ],
       "options": {
-        "main": "apps/bossGtPatchEditor/src/test.ts",
-        "polyfills": "apps/bossGtPatchEditor/src/polyfills.ts",
-        "tsConfig": "apps/bossGtPatchEditor/tsconfig.spec.json",
-        "karmaConfig": "apps/bossGtPatchEditor/karma.conf.js",
-        "styles": ["apps/bossGtPatchEditor/src/styles.scss"],
-        "scripts": [],
-        "assets": [
-          "apps/bossGtPatchEditor/src/favicon.ico",
-          "apps/bossGtPatchEditor/src/assets"
-        ]
+        "jestConfig": "apps/bossGtPatchEditor/jest.config.ts",
+        "passWithNoTests": true
       }
     },
     "lint": {

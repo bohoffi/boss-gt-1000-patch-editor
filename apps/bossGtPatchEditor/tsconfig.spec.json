@@ -3,7 +3,7 @@
   "compilerOptions": {
     "outDir": "../../dist/out-tsc",
     "types": [
-      "jasmine",
+      "jest",
       "node"
     ]
   },
@@ -12,7 +12,9 @@
     "src/polyfills.ts"
   ],
   "include": [
-    "src/**/*.spec.ts",
-    "src/**/*.d.ts"
+    "**/*.spec.ts",
+    "**/*.test.ts",
+    "**/*.d.ts",
+    "jest.config.ts"
   ]
 }
