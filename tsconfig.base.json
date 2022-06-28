@@ -1,7 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
@@ -18,9 +18,6 @@
       "dom"
     ],
     "paths": {
-      "@environments/*": [
-        "environments/*"
-      ],
       "@data/interfaces": [
         "app/modules/data/interfaces/index.ts"
       ],
@@ -30,9 +27,17 @@
       "@data/values": [
         "app/modules/data/values/index.ts"
       ],
+      "@environments/*": [
+        "environments/*"
+      ],
       "@utils/generators": [
         "app/modules/utils/generators/index.ts"
       ]
-    }
-  }
+    },
+    "rootDir": "."
+  },
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }

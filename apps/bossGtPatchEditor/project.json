@@ -1,0 +1,99 @@
+{
+  "sourceRoot": "apps/bossGtPatchEditor/src",
+  "projectType": "application",
+  "prefix": "bgt-pe",
+  "generators": {
+    "@schematics/angular:component": {
+      "style": "scss"
+    }
+  },
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "options": {
+        "outputPath": "dist/apps/bossGtPatchEditor",
+        "index": "apps/bossGtPatchEditor/src/index.html",
+        "main": "apps/bossGtPatchEditor/src/main.ts",
+        "polyfills": "apps/bossGtPatchEditor/src/polyfills.ts",
+        "tsConfig": "apps/bossGtPatchEditor/tsconfig.app.json",
+        "assets": [
+          "apps/bossGtPatchEditor/src/favicon.ico",
+          "apps/bossGtPatchEditor/src/assets"
+        ],
+        "styles": [
+          "apps/bossGtPatchEditor/src/styles.scss"
+        ],
+        "scripts": [],
+        "vendorChunk": true,
+        "extractLicenses": false,
+        "buildOptimizer": false,
+        "sourceMap": true,
+        "optimization": false,
+        "namedChunks": true
+      },
+      "configurations": {
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/bossGtPatchEditor/src/environments/environment.ts",
+              "with": "apps/bossGtPatchEditor/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "buildOptimizer": true,
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "2mb",
+              "maximumError": "5mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "6kb"
+            }
+          ]
+        }
+      },
+      "defaultConfiguration": ""
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "options": {
+        "browserTarget": "bossGtPatchEditor:build"
+      },
+      "configurations": {
+        "production": {
+          "browserTarget": "bossGtPatchEditor:build:production"
+        }
+      }
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "bossGtPatchEditor:build"
+      }
+    },
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "apps/bossGtPatchEditor/src/test.ts",
+        "polyfills": "apps/bossGtPatchEditor/src/polyfills.ts",
+        "tsConfig": "apps/bossGtPatchEditor/tsconfig.spec.json",
+        "karmaConfig": "apps/bossGtPatchEditor/karma.conf.js",
+        "styles": [
+          "apps/bossGtPatchEditor/src/styles.scss"
+        ],
+        "scripts": [],
+        "assets": [
+          "apps/bossGtPatchEditor/src/favicon.ico",
+          "apps/bossGtPatchEditor/src/assets"
+        ]
+      }
+    }
+  }
+}
