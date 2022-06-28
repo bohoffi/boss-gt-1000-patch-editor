@@ -1,26 +1,26 @@
 .value-container {
-    position: relative;
-    max-width: max-content;
-    box-sizing: content-box;
+  position: relative;
+  max-width: max-content;
+  box-sizing: content-box;
 
-    mat-progress-spinner {
-        transform: rotate(-135deg);
-    }
+  mat-progress-spinner {
+    transform: rotate(-135deg);
+  }
 
-    .bg-spinner {
-        position: absolute;
-        top: 0;        
-    }
+  .bg-spinner {
+    position: absolute;
+    top: 0;
+  }
 
-    /deep/ .bg-spinner circle {
-        stroke: darkslategray;
-    }
+  ::ng-deep .bg-spinner circle {
+    stroke: darkslategray;
+  }
 
-    .value {
-        position: absolute;
-        top: 40%;
-        width: 100%;
-        text-align: center;
-        user-select: none;
-    }
+  .value {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    user-select: none;
+  }
 }
