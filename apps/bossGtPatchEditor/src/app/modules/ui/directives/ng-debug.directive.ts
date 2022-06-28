@@ -3,20 +3,19 @@ import {
   TemplateRef,
   ViewContainerRef,
   Input,
-  OnInit
+  OnInit,
 } from '@angular/core';
 import { environment } from '@environments/environment';
 
 @Directive({
-  // tslint:disable-next-line:directive-selector
-  selector: '[ngDebug]'
+  // eslint-disable-next-line @angular-eslint/directive-selector
+  selector: '[ngDebug]',
 })
 export class NgDebugDirective implements OnInit {
   constructor(
     private templateRef: TemplateRef<any>,
     private viewContainer: ViewContainerRef
   ) {}
-
 
   ngOnInit(): void {
     if (environment.production) {
