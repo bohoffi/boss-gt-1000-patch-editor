@@ -19,7 +19,8 @@ export const LivesetStore = signalStore(
     liveset: undefined,
   }),
   withEntities<Patch>(),
-  withComputed(({ entities }) => ({
+  withComputed(({ entities, liveset }) => ({
+    livesetLoaded: computed(() => !!liveset),
     patches: computed(() => entities()),
   })),
   withHooks((store) => ({

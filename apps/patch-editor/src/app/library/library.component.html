@@ -3,8 +3,8 @@
     <h2>Library</h2>
     <div class="library-actions">
       <button mat-stroked-button color="accent">Load file</button>
-      <button mat-stroked-button color="accent">Reload file</button>
-      <button mat-stroked-button color="accent">Save file</button>
+      <button [disabled]="!livesetStore.livesetLoaded()">Reload file</button>
+      <button [disabled]="!livesetStore.livesetLoaded()">Save file</button>
     </div>
   </div>
 
@@ -25,7 +25,7 @@
     </div>
     } @else {
     <div class="liveset-details toolbar">
-      <h3>Unknown liveset</h3>
+      <h3>No liveset loaded</h3>
     </div>
     }
   </div>
