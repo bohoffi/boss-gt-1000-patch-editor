@@ -6,8 +6,7 @@
     "start": "nx run bossGtPatchEditor:serve",
     "build": "nx build",
     "test": "nx test",
-    "lint": "nx lint",
-    "postinstall": "node ./decorate-angular-cli.js"
+    "lint": "nx lint"
   },
   "private": true,
   "dependencies": {
