@@ -94,8 +94,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/apps/bossGtPatchEditor"],
       "options": {
-        "jestConfig": "apps/bossGtPatchEditor/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "apps/bossGtPatchEditor/jest.config.ts"
       }
     },
     "lint": {
