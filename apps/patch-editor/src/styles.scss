@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --background-neutral: #222222;
+  --background-light: #333333;
+  --background-dark: #111111;
+  --background-highlight: #444444;
+  --background-accent: #555555;
+  --foreground-neutral: #dddddd;
+  --foreground-light: #eeeeee;
+  --foreground-dark: #cccccc;
+  --foreground-highlight: #dddddd;
+  --foreground-accent: #bbbbbb;
+}
+
+body {
+  margin: 0;
+  height: 100dvh;
+  width: 100dvw;
+
+  background-color: var(--background-neutral);
+  color: var(--foreground-neutral);
+}
+
+h1 {
+  font-size: 1.25rem;
+  margin: 0;
+  font-weight: normal;
+}
+h2 {
+  font-size: 1.125rem;
+  margin: 0;
+  font-weight: normal;
+}
+h3 {
+  font-size: 1.0625rem;
+  margin: 0;
+  font-weight: normal;
+}
+
+.toolbar {
+  height: 3rem;
+  width: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
