@@ -20,9 +20,7 @@
           "apps/bossGtPatchEditor/src/favicon.ico",
           "apps/bossGtPatchEditor/src/assets"
         ],
-        "styles": [
-          "apps/bossGtPatchEditor/src/styles.scss"
-        ],
+        "styles": ["apps/bossGtPatchEditor/src/styles.scss"],
         "scripts": [],
         "vendorChunk": true,
         "extractLicenses": false,
@@ -91,10 +89,8 @@
       }
     },
     "test": {
-      "builder": "@nrwl/jest:jest",
-      "outputs": [
-        "coverage/apps/bossGtPatchEditor"
-      ],
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/bossGtPatchEditor"],
       "options": {
         "jestConfig": "apps/bossGtPatchEditor/jest.config.ts",
         "passWithNoTests": true
