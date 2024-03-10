@@ -26,6 +26,7 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
+          name: github-pages
           path: dist/apps/patch-editor/browser
 
   deploy:
