@@ -72,14 +72,14 @@
     "serve": {
       "executor": "@angular-devkit/build-angular:dev-server",
       "options": {
-        "browserTarget": "bossGtPatchEditor:build"
+        "buildTarget": "bossGtPatchEditor:build"
       },
       "configurations": {
         "production": {
-          "browserTarget": "bossGtPatchEditor:build:production"
+          "buildTarget": "bossGtPatchEditor:build:production"
         },
         "development": {
-          "browserTarget": "bossGtPatchEditor:build:development"
+          "buildTarget": "bossGtPatchEditor:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -87,7 +87,7 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "bossGtPatchEditor:build"
+        "buildTarget": "bossGtPatchEditor:build"
       }
     },
     "test": {
