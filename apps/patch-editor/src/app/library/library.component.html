@@ -9,6 +9,7 @@
   </div>
 
   <div class="liveset-container">
+    @if (livesetStore.liveset(); as liveset) {
     <div class="liveset-details toolbar">
       <h3>Liveset: {{ liveset.name }}</h3>
       <div class="liveset-metadata">
@@ -18,9 +19,14 @@
       </div>
     </div>
     <div class="liveset-content">
-      @for (patch of liveset.patches; track patch.id ) {
+      @for (patch of livesetStore.patches(); track patch.id ) {
       <bgtpe-libary-item [patch]="patch" [routerLink]="['patch', patch.id]" />
       }
     </div>
+    } @else {
+    <div class="liveset-details toolbar">
+      <h3>Unknown liveset</h3>
+    </div>
+    }
   </div>
 </div>
