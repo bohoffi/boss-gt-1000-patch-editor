@@ -24,9 +24,8 @@ jobs:
         run: npm run poc:build
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-pages-artifact@v1
         with:
-          name: github-pages
           path: dist/apps/patch-editor/browser
 
   deploy:
