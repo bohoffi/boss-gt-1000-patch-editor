@@ -116,15 +116,15 @@
       "version": "16.0.0-beta.1",
       "description": "Replace the deprecated library generator 'simpleModuleName' option from generator defaults with 'simpleName'",
       "factory": "./src/migrations/update-16-0-0/remove-library-generator-simple-module-name-option",
-      "package": "@nrwl/angular",
+      "package": "@nx/angular",
       "name": "remove-library-generator-simple-module-name-option"
     },
     {
       "cli": "nx",
       "version": "16.0.0-beta.1",
-      "description": "Replace @nrwl/angular with @nx/angular",
+      "description": "Replace @nx/angular with @nx/angular",
       "implementation": "./src/migrations/update-16-0-0-add-nx-packages/update-16-0-0-add-nx-packages",
-      "package": "@nrwl/angular",
+      "package": "@nx/angular",
       "name": "update-16-0-0-add-nx-packages"
     },
     {
@@ -132,7 +132,7 @@
       "version": "16.0.0-beta.6",
       "description": "Remove protractor as default e2eTestRunner from nxJson and project configurations",
       "implementation": "./src/migrations/update-16-0-0/remove-protractor-defaults",
-      "package": "@nrwl/angular",
+      "package": "@nx/angular",
       "name": "remove-protractor-defaults-from-generators"
     },
     {
@@ -140,7 +140,7 @@
       "version": "16.0.0-beta.6",
       "description": "Remove karma as default unitTestRunner from nxJson and project configurations",
       "implementation": "./src/migrations/update-16-0-0/remove-karma-defaults",
-      "package": "@nrwl/angular",
+      "package": "@nx/angular",
       "name": "remove-karma-defaults-from-generators"
     },
     {
@@ -151,7 +151,7 @@
       },
       "description": "Remove exported `@angular/platform-server` `renderModule` method. The `renderModule` method is now exported by the Angular CLI.",
       "factory": "./src/migrations/update-16-1-0/remove-render-module-platform-server-exports",
-      "package": "@nrwl/angular",
+      "package": "@nx/angular",
       "name": "remove-render-module-platform-server-exports"
     },
     {
@@ -162,7 +162,7 @@
       },
       "description": "Remove 'ngcc' invocation if exists from the 'postinstall' script in package.json.",
       "factory": "./src/migrations/update-16-1-0/remove-ngcc-invocation",
-      "package": "@nrwl/angular",
+      "package": "@nx/angular",
       "name": "remove-ngcc-invocation"
     },
     {
@@ -173,7 +173,7 @@
       },
       "description": "Extract the app config for standalone apps",
       "factory": "./src/migrations/update-16-1-0/extract-standalone-config-from-bootstrap",
-      "package": "@nrwl/angular",
+      "package": "@nx/angular",
       "name": "extract-app-config-for-standalone"
     },
     {
@@ -184,7 +184,7 @@
       },
       "description": "Update server executors' configuration to disable 'buildOptimizer' for non optimized builds.",
       "factory": "./src/migrations/update-16-1-0/update-server-executor-config",
-      "package": "@nrwl/angular",
+      "package": "@nx/angular",
       "name": "update-server-executor-config"
     },
     {
@@ -195,7 +195,7 @@
       },
       "description": "Update the @angular/cli package version to ~16.0.0.",
       "factory": "./src/migrations/update-16-1-0/update-angular-cli",
-      "package": "@nrwl/angular",
+      "package": "@nx/angular",
       "name": "update-angular-cli-version-16-0-0"
     },
     {
@@ -206,7 +206,7 @@
       },
       "description": "Remove the 'accessibility-' prefix from '@angular-eslint/eslint-plugin-template' rules.",
       "factory": "./src/migrations/update-16-4-0/rename-angular-eslint-accesibility-rules",
-      "package": "@nrwl/angular",
+      "package": "@nx/angular",
       "name": "rename-angular-eslint-accesibility-rules"
     },
     {
@@ -217,7 +217,7 @@
       },
       "description": "Update the @angular/cli package version to ~16.1.0.",
       "factory": "./src/migrations/update-16-4-0/update-angular-cli",
-      "package": "@nrwl/angular",
+      "package": "@nx/angular",
       "name": "update-angular-cli-version-16-1-0"
     },
     {
@@ -225,7 +225,7 @@
       "version": "16.6.0-beta.0",
       "description": "Explicitly set 'updateBuildableProjectDepsInPackageJson' to 'true' in targets that rely on that value as the default.",
       "factory": "./src/migrations/update-16-6-0/explicitly-set-projects-to-update-buildable-deps",
-      "package": "@nrwl/angular",
+      "package": "@nx/angular",
       "name": "explicitly-set-projects-to-update-buildable-deps"
     },
     {
@@ -236,7 +236,7 @@
       },
       "description": "Update the @angular/cli package version to ~16.2.0.",
       "factory": "./src/migrations/update-16-7-0/update-angular-cli",
-      "package": "@nrwl/angular",
+      "package": "@nx/angular",
       "name": "update-angular-cli-version-16-2-0"
     },
     {

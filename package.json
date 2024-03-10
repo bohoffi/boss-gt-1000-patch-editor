@@ -21,11 +21,11 @@
     "@angular/platform-browser": "16.2.12",
     "@angular/platform-browser-dynamic": "16.2.12",
     "@angular/router": "16.2.12",
-    "@nrwl/angular": "16.10.0",
     "bootstrap": "^4.3.1",
     "rxjs": "~6.6.7",
     "tslib": "^2.0.0",
-    "zone.js": "0.13.3"
+    "zone.js": "0.13.3",
+    "@nx/angular": "16.10.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "16.2.12",
