@@ -12,7 +12,7 @@
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/utils/generators"],
       "options": {
         "jestConfig": "libs/utils/generators/jest.config.ts",

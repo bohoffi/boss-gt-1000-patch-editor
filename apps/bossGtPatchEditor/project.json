@@ -91,7 +91,7 @@
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/apps/bossGtPatchEditor"],
       "options": {
         "jestConfig": "apps/bossGtPatchEditor/jest.config.ts",
