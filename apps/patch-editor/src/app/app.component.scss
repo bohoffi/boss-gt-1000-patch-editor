@@ -1,0 +1,22 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+header {
+  width: 100%;
+
+  .toolbar {
+    background-color: var(--background-light);
+    color: var(--foreground-neutral);
+
+    h1 {
+      cursor: pointer;
+    }
+  }
+}
+
+main {
+  flex-grow: 1;
+}

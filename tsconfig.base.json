@@ -9,31 +9,13 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "target": "es2020",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "lib": [
-      "es2018",
-      "dom"
-    ],
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2018", "dom"],
     "paths": {
-      "@environments/*": [
-        "apps/bossGtPatchEditor/src/environments/*"
-      ],
-      "shared-api": [
-        "libs/shared/api/src/index.ts"
-      ],
-      "shared-effects": [
-        "libs/shared/effects/src/index.ts"
-      ],
-      "utils-generators": [
-        "libs/utils/generators/src/index.ts"
-      ]
+      "@bgtpe/shared/api": ["libs/shared/api/src/index.ts"],
+      "@bgtpe/shared/state": ["libs/shared/state/src/index.ts"]
     },
     "rootDir": "."
   },
-  "exclude": [
-    "node_modules",
-    "tmp"
-  ]
+  "exclude": ["node_modules", "tmp"]
 }

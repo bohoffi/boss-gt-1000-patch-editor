@@ -1,0 +1,29 @@
+.patch-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .toolbar {
+    background-color: var(--background-highlight);
+
+    .patch-actions {
+      display: flex;
+      flex-direction: row;
+      gap: 0.5rem;
+    }
+  }
+
+  .patch-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    .patch-routing-container {
+      height: 20rem;
+      padding: 1rem;
+    }
+    .patch-block-container {
+      flex-grow: 1;
+    }
+  }
+}

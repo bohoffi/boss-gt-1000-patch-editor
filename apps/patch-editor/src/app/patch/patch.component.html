@@ -1,0 +1,22 @@
+<div class="patch-container">
+  @if (patchDetailsStore.patch(); as patch) {
+  <div class="patch-details toolbar">
+    <h3>[{{ patch.id }}] {{ patch.name }}</h3>
+    <div class="patch-actions">
+      <button mat-stroked-button color="accent">CTL/EXP</button>
+    </div>
+  </div>
+  <div class="patch-content">
+    <div class="patch-routing-container">
+      <bgtpe-patch-routing />
+    </div>
+    <div class="patch-block-container">
+      <bgtpe-patch-editor />
+    </div>
+  </div>
+  } @else {
+  <div class="patch-details toolbar">
+    <h3>Unknown patch</h3>
+  </div>
+  }
+</div>

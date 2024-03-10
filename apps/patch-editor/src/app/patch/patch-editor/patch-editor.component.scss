@@ -1,0 +1,10 @@
+.editor-details.toolbar {
+  background-color: var(--background-highlight);
+
+  .block-state {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: baseline;
+  }
+}

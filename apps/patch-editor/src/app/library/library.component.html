@@ -1,0 +1,32 @@
+<div class="library-container">
+  <div class="toolbar">
+    <h2>Library</h2>
+    <div class="library-actions">
+      <button mat-stroked-button color="accent">Load file</button>
+      <button [disabled]="!livesetStore.livesetLoaded()">Reload file</button>
+      <button [disabled]="!livesetStore.livesetLoaded()">Save file</button>
+    </div>
+  </div>
+
+  <div class="liveset-container">
+    @if (livesetStore.liveset(); as liveset) {
+    <div class="liveset-details toolbar">
+      <h3>Liveset: {{ liveset.name }}</h3>
+      <div class="liveset-metadata">
+        <span>Format revision: {{ liveset.revision }}</span>
+        <span>Device: {{ liveset.device }}</span>
+        <span></span>
+      </div>
+    </div>
+    <div class="liveset-content">
+      @for (patch of livesetStore.patches(); track patch.id ) {
+      <bgtpe-libary-item [patch]="patch" [routerLink]="['patch', patch.id]" />
+      }
+    </div>
+    } @else {
+    <div class="liveset-details toolbar">
+      <h3>No liveset loaded</h3>
+    </div>
+    }
+  </div>
+</div>

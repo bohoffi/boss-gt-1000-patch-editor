@@ -1,0 +1,34 @@
+.library-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .toolbar {
+    background-color: var(--background-highlight);
+
+    .library-actions {
+      display: flex;
+      flex-direction: row;
+      gap: 0.5rem;
+    }
+  }
+
+  .liveset-container {
+    flex-grow: 1;
+
+    .liveset-details {
+      .liveset-metadata {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+      }
+    }
+
+    .liveset-content {
+      padding: 1rem;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1rem;
+    }
+  }
+}

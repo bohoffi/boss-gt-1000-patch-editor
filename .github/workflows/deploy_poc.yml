@@ -1,0 +1,47 @@
+name: POC Deployment
+
+on:
+  pull_request:
+    branches:
+      - develop
+    types:
+      - closed
+
+jobs:
+  build_poc:
+    name: Builds POC and uploads artifacts
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup node
+        uses: ./.github/actions/setup-node
+
+      - name: Build the POC
+        run: npm run poc:build
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          path: dist/apps/patch-editor/browser
+
+  deploy:
+    name: Deploys the artifact to Github Pages
+    runs-on: ubuntu-latest
+    needs: build_poc
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to Github Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
