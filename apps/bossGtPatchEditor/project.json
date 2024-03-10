@@ -1,4 +1,6 @@
 {
+  "name": "bossGtPatchEditor",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/bossGtPatchEditor/src",
   "projectType": "application",
   "prefix": "bgt-pe",

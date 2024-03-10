@@ -1,9 +1,0 @@
-{
-  "version": 2,
-  "projects": {
-    "bossGtPatchEditor": "apps/bossGtPatchEditor",
-    "shared-api": "libs/shared/api",
-    "shared-effects": "libs/shared/effects",
-    "utils-generators": "libs/utils/generators"
-  }
-}
