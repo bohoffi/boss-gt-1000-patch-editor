@@ -1,5 +1,5 @@
-import { EffectBlock } from '../interfaces';
-import { generateParamValues } from '@utils/generators';
+import { EffectBlock } from 'shared-api';
+import { generateParamValues } from 'utils-generators';
 
 export const distortion1: EffectBlock = {
   identifier: 'DS 1',
@@ -38,11 +38,11 @@ export const distortion1: EffectBlock = {
       values: [
         {
           display: 'OFF',
-          internalValue: 0
+          value: 0
         },
         {
           display: 'ON',
-          internalValue: 1
+          value: 1
         }
       ],
       defaultValueIndex: 0
@@ -91,11 +91,11 @@ export const distortion2: EffectBlock = {
       values: [
         {
           display: 'OFF',
-          internalValue: 0
+          value: 0
         },
         {
           display: 'ON',
-          internalValue: 1
+          value: 1
         }
       ],
       defaultValueIndex: 0
