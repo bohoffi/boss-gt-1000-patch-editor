@@ -1,5 +1,4 @@
 {
-  "npmScope": "boss-gt-patch-editor",
   "affected": {
     "defaultBase": "develop"
   },
