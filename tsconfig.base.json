@@ -11,7 +11,9 @@
     "target": "es2020",
     "typeRoots": ["node_modules/@types"],
     "lib": ["es2018", "dom"],
-    "paths": {},
+    "paths": {
+      "@bgtpe/shared/api": ["libs/shared/api/src/index.ts"]
+    },
     "rootDir": "."
   },
   "exclude": ["node_modules", "tmp"]

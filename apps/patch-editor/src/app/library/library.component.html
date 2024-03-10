@@ -10,16 +10,16 @@
 
   <div class="liveset-container">
     <div class="liveset-details toolbar">
-      <h3>&lt;LIVESET NAME&gt;</h3>
+      <h3>Liveset: {{ liveset.name }}</h3>
       <div class="liveset-metadata">
-        <span>Format revision: &lt;REVISION&gt;</span>
-        <span>Device: &lt;DEVICE&gt;</span>
+        <span>Format revision: {{ liveset.revision }}</span>
+        <span>Device: {{ liveset.device }}</span>
         <span></span>
       </div>
     </div>
     <div class="liveset-content">
-      @for (item of items; track item.id ) {
-      <bgtpe-libary-item [item]="item" [routerLink]="['patch', item.id]" />
+      @for (patch of liveset.patches; track patch.id ) {
+      <bgtpe-libary-item [patch]="patch" [routerLink]="['patch', patch.id]" />
       }
     </div>
   </div>

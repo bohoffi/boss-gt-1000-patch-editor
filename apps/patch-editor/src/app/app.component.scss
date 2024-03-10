@@ -10,6 +10,10 @@ header {
   .toolbar {
     background-color: var(--background-light);
     color: var(--foreground-neutral);
+
+    h1 {
+      cursor: pointer;
+    }
   }
 }
 

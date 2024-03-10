@@ -1,4 +1,5 @@
 import { Component, input } from '@angular/core';
+import { Patch } from '@bgtpe/shared/api';
 
 export interface Item {
   id: string;
@@ -13,5 +14,5 @@ export interface Item {
   styleUrl: './libary-item.component.scss',
 })
 export class LibaryItemComponent {
-  public item = input.required<Item>();
+  public patch = input.required<Patch>();
 }
