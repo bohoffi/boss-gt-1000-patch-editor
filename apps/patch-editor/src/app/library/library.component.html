@@ -2,7 +2,7 @@
   <div class="toolbar">
     <h2>Library</h2>
     <div class="library-actions">
-      <button mat-stroked-button color="accent">Load file</button>
+      <button (click)="loadLiveset()">Load file</button>
       <button [disabled]="!livesetStore.livesetLoaded()">Reload file</button>
       <button [disabled]="!livesetStore.livesetLoaded()">Save file</button>
     </div>
@@ -19,7 +19,8 @@
       </div>
     </div>
     <div class="liveset-content">
-      @for (patch of livesetStore.patches(); track patch.id ) {
+      <!-- @for (patch of livesetStore.patches(); track patch.id ) { -->
+      @for (patch of livesetStore.patches(); track $index ) {
       <bgtpe-libary-item [patch]="patch" [routerLink]="['patch', patch.id]" />
       }
     </div>
@@ -30,3 +31,23 @@
     }
   </div>
 </div>
+
+<dialog #loadLivesetDialog>
+  <bgtpe-common-dialog>
+    <div dialog-header>
+      <h3>Load liveset</h3>
+    </div>
+    <div dialog-content>
+      <label>Upload mapping Json file </label>
+      <input
+        type="file"
+        id="file"
+        (change)="uploadFile($event)"
+        accept=".tsl"
+      />
+    </div>
+    <div dialog-actions>
+      <button (click)="loadLivesetDialog.close()">Cancel</button>
+    </div>
+  </bgtpe-common-dialog>
+</dialog>

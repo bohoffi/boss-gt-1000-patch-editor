@@ -1,7 +1,7 @@
 {
-  "name": "state",
+  "name": "file-processing",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/shared/state/src",
+  "sourceRoot": "libs/shared/file-processing/src",
   "prefix": "lib",
   "tags": ["scope:shared"],
   "projectType": "library",
@@ -10,14 +10,14 @@
       "executor": "@nx/angular:ng-packagr-lite",
       "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
       "options": {
-        "project": "libs/shared/state/ng-package.json"
+        "project": "libs/shared/file-processing/ng-package.json"
       },
       "configurations": {
         "production": {
-          "tsConfig": "libs/shared/state/tsconfig.lib.prod.json"
+          "tsConfig": "libs/shared/file-processing/tsconfig.lib.prod.json"
         },
         "development": {
-          "tsConfig": "libs/shared/state/tsconfig.lib.json"
+          "tsConfig": "libs/shared/file-processing/tsconfig.lib.json"
         }
       },
       "defaultConfiguration": "production"
@@ -26,14 +26,14 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/shared/state/jest.config.ts"
+        "jestConfig": "libs/shared/file-processing/jest.config.ts"
       }
     },
     "lint": {
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/shared/state/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["libs/shared/file-processing/**/*.{ts,tsx,js,jsx}"]
       }
     }
   }

@@ -13,7 +13,11 @@
     "lib": ["es2018", "dom"],
     "paths": {
       "@bgtpe/shared/api": ["libs/shared/api/src/index.ts"],
-      "@bgtpe/shared/state": ["libs/shared/state/src/index.ts"]
+      "@bgtpe/shared/file-processing": [
+        "libs/shared/file-processing/src/index.ts"
+      ],
+      "@bgtpe/shared/state": ["libs/shared/state/src/index.ts"],
+      "@bgtpe/shared/ui": ["libs/shared/ui/src/index.ts"]
     },
     "rootDir": "."
   },

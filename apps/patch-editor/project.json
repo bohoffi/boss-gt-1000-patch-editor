@@ -4,7 +4,7 @@
   "projectType": "application",
   "prefix": "bgtpe",
   "sourceRoot": "apps/patch-editor/src",
-  "tags": [],
+  "tags": ["scope:application"],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:application",
@@ -59,17 +59,18 @@
       },
       "defaultConfiguration": "development"
     },
-    "extract-i18n": {
-      "executor": "@angular-devkit/build-angular:extract-i18n",
-      "options": {
-        "buildTarget": "patch-editor:build"
-      }
-    },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
         "jestConfig": "apps/patch-editor/jest.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/patch-editor/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "serve-static": {

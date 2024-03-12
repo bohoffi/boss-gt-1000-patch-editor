@@ -1,1 +1,1 @@
-export { Liveset, Patch } from './lib/entities';
+export { Liveset, FileLiveset, FilePatch, Patch } from './lib/entities';

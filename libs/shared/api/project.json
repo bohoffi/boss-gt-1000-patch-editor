@@ -20,7 +20,14 @@
       "options": {
         "jestConfig": "libs/shared/api/jest.config.ts"
       }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/shared/api/**/*.{ts,tsx,js,jsx}"]
+      }
     }
   },
-  "tags": []
+  "tags": ["scope:api"]
 }
